@@ -25,8 +25,6 @@ func getMeaningHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	word := strings.TrimPrefix(r.URL.Path, "/getMeaning/")
 
-	fmt.Println("dadwwad")
-
 	if word == "" {
 		jsonWordMissing, _ := json.Marshal("word missing in url path")
 		w.Write(jsonWordMissing)
@@ -57,9 +55,7 @@ func getRes(word, what string) string {
 	f, err := os.OpenFile("usage.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	defer f.Close()
 	if err != nil {
-
 		log.Fatalf("error opening file: %v", err)
-
 	}
 
 	log.SetOutput(f)
