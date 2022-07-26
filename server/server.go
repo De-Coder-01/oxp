@@ -25,13 +25,14 @@ func getMeaningHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	word := strings.TrimPrefix(r.URL.Path, "/getMeaning/")
 
+	fmt.Println("dadwwad")
+
 	if word == "" {
 		jsonWordMissing, _ := json.Marshal("word missing in url path")
 		w.Write(jsonWordMissing)
 	} else {
 		res := getRes(word, "meaning")
-		jsonRes, _ := json.Marshal(res)
-		w.Write(jsonRes)
+		w.Write([]byte(res))
 	}
 
 }
@@ -46,8 +47,6 @@ func getSentenceHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write(jsonWordMissing)
 	} else {
 		res := getRes(word, "sentence")
-		//jsonRes, _ := json.Marshal(res)
-		//w.Write(jsonRes)
 		w.Write([]byte(res))
 	}
 
@@ -68,13 +67,31 @@ func getRes(word, what string) string {
 	p := oxp.NewClient()
 	resp, _ := p.Search(context.Background(), word)
 
+	if resp == nil {
+		if what == "meaning" {
+			return "no meaning"
+		}
+		return "no sentence"
+	}
+
 	var entries = []*Entry(resp.([]*Entry))
 
+	fmt.Println("Here3")
+	fmt.Println(len(entries))
+
 	if what == "meaning" {
+		fmt.Println("Here")
+		fmt.Println(len(entries))
+		if len(entries[0].Senses) == 0 {
+			return "no meaning"
+		}
 		res := entries[0].Senses[0].Def
 		log.Println("Got request for meaning of : ", word)
 		return res
 	} else {
+		if len(entries[0].Senses[0].Examples) == 0 {
+			return "no sentence"
+		}
 		res := entries[0].Senses[0].Examples[0]
 		log.Println("Got request for sentence of : ", word)
 		return res

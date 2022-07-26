@@ -1,1 +1,154 @@
 2022/07/26 14:00:21 Got request for meaning of :  congenial
+2022/07/26 14:01:40 Got request for meaning of :  abound
+2022/07/26 14:01:44 Got request for meaning of :  abound
+2022/07/26 14:01:50 Got request for meaning of :  amorphous
+2022/07/26 14:02:16 Got request for meaning of :  austere
+2022/07/26 14:03:57 Got request for meaning of :  taciturn
+2022/07/26 14:03:57 Got request for meaning of :  deify
+2022/07/26 14:03:57 Got request for meaning of :  wary
+2022/07/26 14:03:57 Got request for meaning of :  daunting
+2022/07/26 14:03:57 Got request for meaning of :  flout
+2022/07/26 14:03:57 Got request for meaning of :  belie
+2022/07/26 14:03:57 Got request for meaning of :  capricious
+2022/07/26 14:03:57 Got request for meaning of :  placate
+2022/07/26 14:03:57 Got request for meaning of :  humdrum
+2022/07/26 14:03:57 Got request for meaning of :  puerile
+2022/07/26 14:03:57 Got request for meaning of :  insipid
+2022/07/26 14:03:57 Got request for meaning of :  cerebral
+2022/07/26 14:03:57 Got request for meaning of :  disseminate
+2022/07/26 14:03:57 Got request for meaning of :  cursory
+2022/07/26 14:03:57 Got request for meaning of :  negligent
+2022/07/26 14:03:57 Got request for meaning of :  homogeneous
+2022/07/26 14:03:57 Got request for meaning of :  misanthropic
+2022/07/26 14:03:57 Got request for meaning of :  didactic
+2022/07/26 14:03:57 Got request for meaning of :  proclivity
+2022/07/26 14:03:57 Got request for meaning of :  quixotic
+2022/07/26 14:03:57 Got request for meaning of :  spendthrift
+2022/07/26 14:03:57 Got request for meaning of :  feasible
+2022/07/26 14:04:21 Got request for sentence of :  abound
+2022/07/26 14:04:26 Got request for sentence of :  feasible
+2022/07/26 14:04:26 Got request for sentence of :  negligent
+2022/07/26 14:04:26 http: panic serving 127.0.0.1:56814: runtime error: index out of range [0] with length 0
+goroutine 381 [running]:
+net/http.(*conn).serve.func1()
+	/home/gitpod/go/src/net/http/server.go:1825 +0xbf
+panic({0x6fd680, 0xc0004b6840})
+	/home/gitpod/go/src/runtime/panic.go:844 +0x258
+github.com/man0xff/server.getRes({0xc0000169d1, 0x7}, {0x719842, 0x8})
+	/workspace/oxp/server/server.go:78 +0x392
+github.com/man0xff/server.getSentenceHandler({0x7a0ac0, 0xc0004b82a0}, 0xc000142300)
+	/workspace/oxp/server/server.go:48 +0x176
+net/http.HandlerFunc.ServeHTTP(0x7fa3dcdb5360?, {0x7a0ac0?, 0xc0004b82a0?}, 0x40e525?)
+	/home/gitpod/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7a0ac0, 0xc0004b82a0}, 0xc000142300)
+	/home/gitpod/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0006086f0?}, {0x7a0ac0, 0xc0004b82a0}, 0xc000142300)
+	/home/gitpod/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000209220, {0x7a0d18, 0xc00009b230})
+	/home/gitpod/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/home/gitpod/go/src/net/http/server.go:3071 +0x4db
+2022/07/26 14:04:26 Got request for sentence of :  homogeneous
+2022/07/26 14:04:26 Got request for sentence of :  belie
+2022/07/26 14:04:26 Got request for sentence of :  misnomer
+2022/07/26 14:04:26 Got request for sentence of :  obsequious
+2022/07/26 14:04:26 http: panic serving 127.0.0.1:56824: runtime error: index out of range [0] with length 0
+goroutine 390 [running]:
+net/http.(*conn).serve.func1()
+	/home/gitpod/go/src/net/http/server.go:1825 +0xbf
+panic({0x6fd680, 0xc00015aff0})
+	/home/gitpod/go/src/runtime/panic.go:844 +0x258
+github.com/man0xff/server.getRes({0xc0004a9bb1, 0x5}, {0x719842, 0x8})
+	/workspace/oxp/server/server.go:78 +0x392
+github.com/man0xff/server.getSentenceHandler({0x7a0ac0, 0xc0004760e0}, 0xc000242600)
+	/workspace/oxp/server/server.go:48 +0x176
+net/http.HandlerFunc.ServeHTTP(0x7fa3dde587a8?, {0x7a0ac0?, 0xc0004760e0?}, 0x40e525?)
+	/home/gitpod/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7a0ac0, 0xc0004760e0}, 0xc000242600)
+	/home/gitpod/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004bbce0?}, {0x7a0ac0, 0xc0004760e0}, 0xc000242600)
+	/home/gitpod/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000209400, {0x7a0d18, 0xc00009b230})
+	/home/gitpod/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/home/gitpod/go/src/net/http/server.go:3071 +0x4db
+2022/07/26 14:04:26 http: panic serving 127.0.0.1:56826: runtime error: index out of range [0] with length 0
+goroutine 391 [running]:
+net/http.(*conn).serve.func1()
+	/home/gitpod/go/src/net/http/server.go:1825 +0xbf
+panic({0x6fd680, 0xc00001e4e0})
+	/home/gitpod/go/src/runtime/panic.go:844 +0x258
+github.com/man0xff/server.getRes({0xc000016df1, 0x8}, {0x719842, 0x8})
+	/workspace/oxp/server/server.go:78 +0x392
+github.com/man0xff/server.getSentenceHandler({0x7a0ac0, 0xc0004b8700}, 0xc000142e00)
+	/workspace/oxp/server/server.go:48 +0x176
+net/http.HandlerFunc.ServeHTTP(0x7fa3dcdb5450?, {0x7a0ac0?, 0xc0004b8700?}, 0x40e525?)
+	/home/gitpod/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7a0ac0, 0xc0004b8700}, 0xc000142e00)
+	/home/gitpod/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000608e10?}, {0x7a0ac0, 0xc0004b8700}, 0xc000142e00)
+	/home/gitpod/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002094a0, {0x7a0d18, 0xc00009b230})
+	/home/gitpod/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/home/gitpod/go/src/net/http/server.go:3071 +0x4db
+2022/07/26 14:04:26 http: panic serving 127.0.0.1:56816: runtime error: index out of range [0] with length 0
+goroutine 384 [running]:
+net/http.(*conn).serve.func1()
+	/home/gitpod/go/src/net/http/server.go:1825 +0xbf
+panic({0x6fd680, 0xc0003c8ba0})
+	/home/gitpod/go/src/runtime/panic.go:844 +0x258
+github.com/man0xff/server.getRes({0xc000016a91, 0xb}, {0x719842, 0x8})
+	/workspace/oxp/server/server.go:78 +0x392
+github.com/man0xff/server.getSentenceHandler({0x7a0ac0, 0xc0004b8380}, 0xc000142a00)
+	/workspace/oxp/server/server.go:48 +0x176
+net/http.HandlerFunc.ServeHTTP(0x7fa3dcdb5540?, {0x7a0ac0?, 0xc0004b8380?}, 0x40e525?)
+	/home/gitpod/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7a0ac0, 0xc0004b8380}, 0xc000142a00)
+	/home/gitpod/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000608930?}, {0x7a0ac0, 0xc0004b8380}, 0xc000142a00)
+	/home/gitpod/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002092c0, {0x7a0d18, 0xc00009b230})
+	/home/gitpod/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/home/gitpod/go/src/net/http/server.go:3071 +0x4db
+2022/07/26 14:04:26 Got request for sentence of :  cerebral
+2022/07/26 14:04:26 Got request for sentence of :  insipid
+2022/07/26 14:04:26 Got request for sentence of :  didactic
+2022/07/26 14:04:26 Got request for sentence of :  conspicuous
+2022/07/26 14:04:26 Got request for sentence of :  loquacious
+2022/07/26 14:04:26 Got request for sentence of :  humdrum
+2022/07/26 14:04:26 Got request for sentence of :  wary
+2022/07/26 14:04:26 Got request for sentence of :  flout
+2022/07/26 14:04:26 Got request for sentence of :  proclivity
+2022/07/26 14:04:26 Got request for sentence of :  disseminate
+2022/07/26 14:04:27 Got request for sentence of :  austere
+2022/07/26 14:04:27 Got request for sentence of :  daunting
+2022/07/26 14:04:27 Got request for sentence of :  congenial
+2022/07/26 14:04:27 Got request for sentence of :  capricious
+2022/07/26 14:04:27 http: panic serving 127.0.0.1:56854: runtime error: index out of range [0] with length 0
+goroutine 574 [running]:
+net/http.(*conn).serve.func1()
+	/home/gitpod/go/src/net/http/server.go:1825 +0xbf
+panic({0x6fd680, 0xc00064e678})
+	/home/gitpod/go/src/runtime/panic.go:844 +0x258
+github.com/man0xff/server.getRes({0xc000130521, 0xc}, {0x719842, 0x8})
+	/workspace/oxp/server/server.go:78 +0x392
+github.com/man0xff/server.getSentenceHandler({0x7a0ac0, 0xc0001b4380}, 0xc000142400)
+	/workspace/oxp/server/server.go:48 +0x176
+net/http.HandlerFunc.ServeHTTP(0x7fa3dc4c1e68?, {0x7a0ac0?, 0xc0001b4380?}, 0x40e525?)
+	/home/gitpod/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7a0ac0, 0xc0001b4380}, 0xc000142400)
+	/home/gitpod/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004ba5d0?}, {0x7a0ac0, 0xc0001b4380}, 0xc000142400)
+	/home/gitpod/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00044c140, {0x7a0d18, 0xc00009b230})
+	/home/gitpod/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/home/gitpod/go/src/net/http/server.go:3071 +0x4db
+2022/07/26 14:04:27 Got request for sentence of :  amorphous
+2022/07/26 14:04:27 Got request for sentence of :  placate
+2022/07/26 14:04:27 Got request for sentence of :  cursory
+2022/07/26 14:09:08 Got request for meaning of :  nice
+2022/07/26 14:09:18 Got request for meaning of :  dum
+2022/07/26 14:09:34 Got request for meaning of :  dummy
