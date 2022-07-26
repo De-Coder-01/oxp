@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/man0xff/oxp"
@@ -53,6 +54,16 @@ func getSentenceHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getRes(word, what string) string {
+
+	f, err := os.OpenFile("usage.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	defer f.Close()
+	if err != nil {
+
+		log.Fatalf("error opening file: %v", err)
+
+	}
+
+	log.SetOutput(f)
 
 	p := oxp.NewClient()
 	resp, _ := p.Search(context.Background(), word)
