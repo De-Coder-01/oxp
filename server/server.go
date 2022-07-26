@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 
@@ -19,7 +20,8 @@ func ServeRequests() {
 }
 
 func getMeaningHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	//w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain")
 	word := strings.TrimPrefix(r.URL.Path, "/getMeaning/")
 
 	if word == "" {
@@ -34,7 +36,8 @@ func getMeaningHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getSentenceHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	//w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain")
 	word := strings.TrimPrefix(r.URL.Path, "/getSentence/")
 
 	if word == "" {
@@ -42,8 +45,9 @@ func getSentenceHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write(jsonWordMissing)
 	} else {
 		res := getRes(word, "sentence")
-		jsonRes, _ := json.Marshal(res)
-		w.Write(jsonRes)
+		//jsonRes, _ := json.Marshal(res)
+		//w.Write(jsonRes)
+		w.Write([]byte(res))
 	}
 
 }
@@ -57,9 +61,11 @@ func getRes(word, what string) string {
 
 	if what == "meaning" {
 		res := entries[0].Senses[0].Def
+		log.Println("Got request for meaning of : ", word)
 		return res
 	} else {
 		res := entries[0].Senses[0].Examples[0]
+		log.Println("Got request for sentence of : ", word)
 		return res
 	}
 
