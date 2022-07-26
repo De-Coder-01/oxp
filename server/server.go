@@ -72,12 +72,7 @@ func getRes(word, what string) string {
 
 	var entries = []*Entry(resp.([]*Entry))
 
-	fmt.Println("Here3")
-	fmt.Println(len(entries))
-
 	if what == "meaning" {
-		fmt.Println("Here")
-		fmt.Println(len(entries))
 		if len(entries[0].Senses) == 0 {
 			return "no meaning"
 		}
