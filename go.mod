@@ -1,4 +1,4 @@
-module github.com/man0xff/oxp
+module github.com/man0xff
 
 go 1.13
 
