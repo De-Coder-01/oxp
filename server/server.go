@@ -100,6 +100,12 @@ func getRes(word, what string) string {
 				}
 			}
 		}
+
+		/*
+			Remove last stray " |"
+		*/
+		resultantExample = resultantExample[:len(resultantExample)-3]
+
 		return resultantExample
 	}
 
