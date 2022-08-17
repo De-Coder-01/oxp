@@ -81,11 +81,26 @@ func getRes(word, what string) string {
 		return res
 	} else {
 		log.Println("Got request for sentence of : ", word)
+
+		/*
+			Return if no sense
+		*/
 		if len(entries[0].Senses) == 0 {
 			return "no sentence"
 		}
-		res := entries[0].Senses[0].Examples[0]
-		return res
+
+		/*
+			Iterative search for example, append with |
+		*/
+		resultantExample := ""
+		for _, sens := range entries[0].Senses {
+			if len(sens.Examples) != 0 {
+				for _, exp := range sens.Examples {
+					resultantExample += (exp + " | ")
+				}
+			}
+		}
+		return resultantExample
 	}
 
 }
