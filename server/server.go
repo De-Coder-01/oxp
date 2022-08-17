@@ -73,18 +73,18 @@ func getRes(word, what string) string {
 	var entries = []*Entry(resp.([]*Entry))
 
 	if what == "meaning" {
+		log.Println("Got request for meaning of : ", word)
 		if len(entries[0].Senses) == 0 {
 			return "no meaning"
 		}
 		res := entries[0].Senses[0].Def
-		log.Println("Got request for meaning of : ", word)
 		return res
 	} else {
-		if len(entries[0].Senses[0].Examples) == 0 {
+		log.Println("Got request for sentence of : ", word)
+		if len(entries[0].Senses) == 0 {
 			return "no sentence"
 		}
 		res := entries[0].Senses[0].Examples[0]
-		log.Println("Got request for sentence of : ", word)
 		return res
 	}
 
