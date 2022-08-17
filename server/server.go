@@ -101,6 +101,10 @@ func getRes(word, what string) string {
 			}
 		}
 
+		if resultantExample == "" {
+			return "no sentence"
+		}
+
 		/*
 			Remove last stray " |"
 		*/
